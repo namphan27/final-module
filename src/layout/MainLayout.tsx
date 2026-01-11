@@ -1,8 +1,8 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import Footer from "./Footer";
+import Message from "./Message";
 
 export default function MainLayout() {
   return (
@@ -18,6 +18,9 @@ export default function MainLayout() {
           <Outlet />
         </section>
 
+        <section>
+          <Message />
+        </section>
         <Footer />
       </main>
     </div>

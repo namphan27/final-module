@@ -10,7 +10,7 @@ import {
   Menu,
   Grid2x2,
 } from "lucide-react";
-import Search from "@/pages/Search";
+import Search from "../pages/Search";
 
 const getActive = () =>
   "flex items-center gap-3 p-2 rounded text-white hover:bg-gray-800 transition";
@@ -26,9 +26,7 @@ export default function Sidebar() {
             <Home className="w-5 h-5" />
             Trang chủ
           </NavLink>
-
           <Search />
-
           <NavLink to="/explore" className={getActive}>
             <Compass className="w-5 h-5" />
             Khám phá

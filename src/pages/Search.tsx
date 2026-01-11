@@ -10,7 +10,9 @@ export default function Search() {
   return (
     <>
       <button
-        onClick={() => (isOpen ? dispatch(closeSearch()) : dispatch(openSearch()))}
+        onClick={() =>
+          isOpen ? dispatch(closeSearch()) : dispatch(openSearch())
+        }
         className="flex items-center gap-3 p-2 rounded text-white hover:bg-gray-800 transition w-full"
       >
         <SearchIcon className="w-5 h-5" />
@@ -20,18 +22,18 @@ export default function Search() {
       {isOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black/40 z-40"
+            className="fixed inset-0 bg-black/40 z-[999]"
             onClick={() => dispatch(closeSearch())}
           />
 
-          <div className="fixed top-0 left-[240px] h-full w-[350px] sm:w-[400px] bg-[#121212] border-l border-gray-700 shadow-lg z-50 flex flex-col">
+          <div className="fixed top-0 left-[240px] h-full w-[350px] bg-[#121212] border-l border-gray-700 shadow-lg z-[1000] flex flex-col">
             <div className="flex items-center justify-between p-4 border-b border-gray-700">
               <h2 className="text-lg font-semibold text-white">Tìm kiếm</h2>
               <button
                 onClick={() => dispatch(closeSearch())}
                 className="p-1 rounded hover:bg-gray-800"
               >
-                <X onClick={() => dispatch(closeSearch())} className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
+                <X className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
               </button>
             </div>
 

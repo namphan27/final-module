@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 interface UserState {
   items: string[];
   isSearchOpen?: boolean;
+  isMessageOpen?: boolean;
   name?: string;
 }
 export const initialState: UserState = {
@@ -21,7 +22,14 @@ export const userSlice = createSlice({
     closeSearch: (state) => {
       state.isSearchOpen = false;
     },
+    openMessage: (state) => {
+      state.isMessageOpen = true;
+    },
+    closeMessage: (state) => {
+      state.isMessageOpen = false;
+    },
   },
 });
-export const { update, openSearch, closeSearch } = userSlice.actions;
+export const { update, openSearch, closeSearch, openMessage, closeMessage } =
+  userSlice.actions;
 export default userSlice.reducer;

@@ -1,8 +1,8 @@
 const suggestions = [
   { name: "Phan Hải Nam", avatar: "/avatar2.jpg" },
-  { name: "Nguyen Van A", avatar: "/avatar3.jpg" },
-  { name: "Le Thi B", avatar: "/avatar4.jpg" },
-  { name: "Tran Van C", avatar: "/avatar5.jpg" },
+  { name: "Phan Hải Nam", avatar: "/avatar3.jpg" },
+  { name: "Phan Hải Nam", avatar: "/avatar4.jpg" },
+  { name: "Phan Hải Nam", avatar: "/avatar5.jpg" },
 ];
 
 export default function RightSidebar() {
