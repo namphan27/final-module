@@ -1,12 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 interface UserState {
   items: string[];
-  isSearchOpen?: boolean;
-  isMessageOpen?: boolean;
+  isSearchOpen: boolean;
+  isMessageOpen: boolean;
   name?: string;
 }
+
 export const initialState: UserState = {
   items: [],
+  isSearchOpen: false,
+  isMessageOpen: false,
 };
 
 export const userSlice = createSlice({

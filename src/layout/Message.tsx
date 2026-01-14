@@ -61,7 +61,7 @@ export default function Message() {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed bottom-4 right-4 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg"
+          className="fixed bottom-4 right-4 flex items-center gap-2 bg-gray-800 hover:bg-gray-500 text-white px-4 py-2 rounded-full shadow-lg cursor-pointer"
         >
           <Send size={18} />
           <span>Tin nhắn</span>
