@@ -6,7 +6,7 @@ export interface LoginPayload {
   email: string;
   password: string;
 }
-export const login = (data: LoginPayload) => {
+export const isLogin = (data: LoginPayload) => {
   return axiosInstance.post("/auth/login", data);
 };
 
@@ -21,21 +21,17 @@ export default function Login() {
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
-
     try {
       setLoading(true);
+      const res = await isLogin({ email, password });
 
-      const res = await login({
-        email,
-        password,
-      });
+      const { user, tokens } = res.data.data;
+      const { accessToken, refreshToken } = tokens;
 
-      const { user, accessToken, refreshToken } = res.data.data;
-
-      localStorage.setItem("isLogin", "true");
-      localStorage.setItem("user", JSON.stringify(user));
       localStorage.setItem("accessToken", accessToken);
       localStorage.setItem("refreshToken", refreshToken);
+      localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem("isLogin", "true");
 
       navigate("/");
     } catch (err: any) {
@@ -47,7 +43,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-[#0e0f12] text-white flex items-center justify-center px-4">
-      <div className="w-full max-w-[350px]">
+      <div className="w-full max-w-88">
         <h1 className="text-4xl font-serif text-center mb-6">Instagram</h1>
 
         <form onSubmit={handleLogin}>

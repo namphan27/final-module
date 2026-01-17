@@ -43,7 +43,7 @@ export default function Register() {
   };
   return (
     <div className="min-h-screen bg-[#0e0f12] text-white flex flex-col items-center justify-center px-4">
-      <div className="flex flex-col w-full max-w-[360px] border border-[#26272b] rounded p-6 gap-4">
+      <div className="flex flex-col w-full max-w-90 border border-[#26272b] rounded p-6 gap-4">
         <h1 className="text-4xl font-serif text-center mb-1">Instagram</h1>
 
         <p className="text-center text-sm opacity-80">
@@ -55,9 +55,9 @@ export default function Register() {
         </button>
 
         <div className="flex items-center gap-4">
-          <div className="flex-1 h-[1px] bg-[#2e2f33]" />
+          <div className="flex-1 h-px bg-[#2e2f33]" />
           <span className="text-xs opacity-70">HOẶC</span>
-          <div className="flex-1 h-[1px] bg-[#2e2f33]" />
+          <div className="flex-1 h-px bg-[#2e2f33]" />
         </div>
 
         <form
@@ -107,7 +107,7 @@ export default function Register() {
         </form>
       </div>
 
-      <div className="border border-[#26272b] rounded p-4 text-center w-full max-w-[360px] mt-3 text-sm">
+      <div className="border border-[#26272b] rounded p-4 text-center w-full max-w-90 mt-3 text-sm">
         Bạn có tài khoản?{" "}
         <span
           onClick={() => navigate("/login")}
@@ -117,7 +117,7 @@ export default function Register() {
         </span>
       </div>
 
-      <footer className="text-xs opacity-60 mt-10 flex flex-wrap gap-3 justify-center max-w-[800px]">
+      <footer className="text-xs opacity-60 mt-10 flex flex-wrap gap-3 justify-center max-w-200">
         <span>Meta</span>
         <span>Giới thiệu</span>
         <span>Blog</span>

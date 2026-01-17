@@ -69,7 +69,7 @@ function ReelItem({ reel }: { reel: (typeof reels)[number] }) {
         <div className="absolute right-0 top-0 h-full w-1/2  to-transparent" />
       </div>
 
-      <div className="relative w-[360px] h-[640px] rounded-xl overflow-hidden shadow-2xl bg-black">
+      <div className="relative w-90 h-160rounded-xl overflow-hidden shadow-2xl bg-black">
         <video
           ref={videoRef}
           src={reel.videoUrl}

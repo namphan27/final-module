@@ -11,6 +11,7 @@ import Profile from "./pages/Profile";
 import Middleware from "./auth/Middleware";
 import Login from "./auth/Login";
 import Register from "./auth/Regiter";
+import VerifyEmail from "./auth/VerifyEmail";
 export default function App() {
   return (
     <>
@@ -31,6 +32,7 @@ export default function App() {
 
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/verify-email/:token" element={<VerifyEmail />} />
         </Routes>
       </BrowserRouter>
     </>

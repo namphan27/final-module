@@ -3,6 +3,7 @@ import Sidebar from "./Sidebar";
 // import Header from "./Header";
 import Footer from "./Footer";
 import Message from "./Message";
+import Search from "../pages/Search";
 
 export default function MainLayout() {
   return (
@@ -16,6 +17,7 @@ export default function MainLayout() {
 
         <section className="flex-1 overflow-auto min-w-0">
           <Outlet />
+          <Search />
         </section>
 
         <section>

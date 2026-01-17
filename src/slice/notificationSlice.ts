@@ -2,11 +2,12 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 interface NotificationState {
   unreadCount: number;
-  lastMessage?: string;
+  lastMessage: string | null;
 }
 
 const initialState: NotificationState = {
   unreadCount: 0,
+  lastMessage: null,
 };
 
 const notificationSlice = createSlice({
@@ -19,11 +20,10 @@ const notificationSlice = createSlice({
     },
     clearNotification(state) {
       state.unreadCount = 0;
-      state.lastMessage = undefined;
+      state.lastMessage = null;
     },
   },
 });
 
 export const { newMessage, clearNotification } = notificationSlice.actions;
-
 export default notificationSlice.reducer;

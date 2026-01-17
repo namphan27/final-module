@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "https://instagram.f8team.dev",
+  baseURL: "https://instagram.f8team.dev/api",
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
